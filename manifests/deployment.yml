@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: "aksyhz172"
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: "aksyhz172"
+    spec:
+      containers:
+        - name: "aksyhz172"
+          image: "acryhz172.azurecr.io/aksyhz172"
+          ports:
+          - containerPort: 80
